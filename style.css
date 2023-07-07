@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#beg{
+    padding: 20px, 20px;
+    
+    color: black;
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px , 8%;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+ 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px, 40px, 0 20px;
+}
+.container .heading{
+    padding-bottom: 5%;
+
+}
+.container .heading h3{
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+.container .heading h3 span{
+    font-weight: 100;
+    color: #990000;
+
+}
+.container .dream{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .dream .box{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+}
+.container .dream .box img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    
+}
+  .heading1{
+    color: black;
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    padding-left: 30rem;
+  }
+
+ .heading1 span{
+    font-weight: 100;
+    color: #990000;
+}
+#aboutcontent{
+    line-height: 2;
+}
