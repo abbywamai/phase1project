@@ -81,7 +81,8 @@ nav ul li a{
     font-weight: bolder;
     border-bottom: 2px solid black;
     text-decoration: none;
-    padding-left: 30rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
   }
 
  .heading1 span{
@@ -90,4 +91,30 @@ nav ul li a{
 }
 #aboutcontent{
     line-height: 2;
+}
+#aboutimg{
+    max-width: 52%;
+    max-height: auto;
+    float: left;
+    padding-top: 2rem;
+    
+    
+}
+#imgdiv h2{
+    font-size: 6rem;
+    font-weight: lighter;
+}
+#imgdiv h2 span{
+    color: #990000;
+    fo
+}
+#h4{
+    font-size: 2rem;
+    font-weight: lighter;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+#h4 span{
+    color: #990000;
 }

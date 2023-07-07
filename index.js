@@ -31,7 +31,13 @@ contentContainer.innerHTML = `
             <h2>ART<span>&I</span></h2>
             </div >
             <div id="aboutcontent">
+            <div id="firstpart">
             <p>Welcome to <span class="brand">ART&I</span>, a captivating online art gallery that showcases artwork from around the world. We are passionate about connecting art enthusiasts, collectors, and artists on a global platform,providing a space where creativity knows no boundaries.</p>
+           </div>
+           <div id="imgdiv">
+            <img id ="aboutimg"src="about.jpeg">
+            <h2><span>Ignite</span><br> Your Inner Masterpiece</h2>
+            </div>
             <p>At <span class="brand">ART&amp;I</span>, we believe that art is a universal language that transcends borders and cultures. Our mission is to showcase the extraordinary talent of artists from diverse backgrounds, bringing their unique visions to a worldwide audience. We curate a stunning collection of artwork that encompasses various styles, genres, and mediums, providing a visual feast for art lovers everywhere.</p>
             <p>We pride ourselves on being a hub for both established and emerging artists, giving them a platform to share their stories and express their artistic journeys. Through our carefully selected artworks, we aim to evoke emotions, provoke thoughts, and inspire meaningful connections between the art and its viewers.</p>
             <p>What sets <span class="brand">ART&amp;I</span> apart is our commitment to fostering a sense of community. We encourage interaction and dialogue, allowing art enthusiasts to engage with artists, share their perspectives, and gain insights into the creative process. Our blog features thought-provoking articles, artist interviews, and behind-the-scenes glimpses into the art world, enriching your art experience beyond the confines of the gallery walls.</p>
