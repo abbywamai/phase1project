@@ -24,7 +24,7 @@ aboutLink.addEventListener('click', loadAboutContent);
 //function to load about content
 function loadAboutContent(event){
     event.preventDefault();
-    const contentContainer = document.getElementById("content-container");
+    const contentContainer = document.getElementById("content-container")
 
 contentContainer.innerHTML = `
 <div class= "heading1">
@@ -43,112 +43,108 @@ contentContainer.innerHTML = `
 }
 
 
-// //select the 'the Classics' link
-// const classicsLink = document.getElementById('classicslink');
-// //add event listener
-// classicsLink.addEventListener('click',loadClassicsContent);
-// //function for loading the content
-// function loadClassicsContent(event){
-//     event.preventDefault();
-// //fetch the data
-//     fetch('http://localhost:4000/classics')
-//     .then(response => response.json())
-//     .then(data => {
-//               const classicsData = data.classics
-//               const contentContainer = document.getElementById("content-container");
-// //create html elements for each content of the artwork
-//               classicsData.forEach(classics => {
-                
-//                 const classicDiv = document.createElement('div');
-//                 classicDiv.classList.add('classics');
-
-//                 const heading = document.createElement('h3');
-//                 heading.textContent = classics.name
-
-//                 const art = document.createElement('h2');
-//                 art.textContent = `Art : ${classics.famousArtwork}`;
-
-//                 const image = document.createElement('img');
-//                 image.src =classics.image;
-//                 image.alt = classics.name;
-
-//                 const description = document.createElement('p');
-//                 description.textContent = `${classics.description}`
-
-//                 const aboutArtist = document.createElement('p');
-//                 aboutArtist.textContent = `About ${classics.name}:${classics.about}`
-// //appending elements to container
-//                 classicDiv.appendChild(heading);
-//                 classicDiv.appendChild(art);
-//                 classicDiv.appendChild(image);
-//                 classicDiv.appendChild(description);
-//                 classicDiv.appendChild(aboutArtist);
-//                 contentContainer.appendChild(classicDiv);
-
-//               });
-
-//     })
-//     .catch(error =>{
-//         console.log(error)
-//     });
-        
-// }
-
-// select the 'the Classics' link
+//select the 'the Classics' link
 const classicsLink = document.getElementById('classicslink');
-// add event listener
+// // add event listener
 classicsLink.addEventListener('click', loadClassicsContent);
 
-// function for loading the content
 function loadClassicsContent(event) {
-  event.preventDefault();
-
-  // fetch the data
-  fetch('http://localhost:4000/classics')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to fetch classics data');
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (!data.classics || !Array.isArray(data.classics)) {
-        throw new Error('Invalid response structure');
-      }
-
-      const classicsData = data.classics;
-
-      const contentContainer = document.getElementById('content-container');
-
-      classicsData.forEach(classics => {
-        const classicDiv = document.createElement('div');
-        classicDiv.classList.add('classics');
-
-        const heading = document.createElement('h3');
-        heading.textContent = classics.name;
-
-        const art = document.createElement('h2');
-        art.textContent = `Art: ${classics.famousArtwork}`;
-
-        const image = document.createElement('img');
-        image.src = classics.image;
-        image.alt = classics.name;
-
-        const description = document.createElement('p');
-        description.textContent = classics.description;
-
-        const aboutArtist = document.createElement('p');
-        aboutArtist.textContent = `About ${classics.name}: ${classics.about}`;
-
-        classicDiv.appendChild(heading);
-        classicDiv.appendChild(art);
-        classicDiv.appendChild(image);
-        classicDiv.appendChild(description);
-        classicDiv.appendChild(aboutArtist);
-        contentContainer.appendChild(classicDiv);
+    event.preventDefault();
+  
+    fetch('http://localhost:4000/classics')
+      .then(response => response.json())
+      .then(classics => {
+        const contentContainer = document.getElementById("content-container");
+        contentContainer.innerHTML = ""; // Clear existing content
+        
+        classics.forEach(artist => show(artist, contentContainer));
       });
-    })
-    .catch(error => {
-      console.error('Error loading classics:', error);
-    });
-}
+  }
+  
+  function show(artist, container) {
+    const classicContent = `
+      <h3>${artist.name}</h3>
+      <h1>${artist.famousArtwork}</h1>
+      <img src="${artist.image}">
+      <p>${artist.description}</p>
+      <p><em>${artist.about}</em></p>
+    `;
+  
+    container.innerHTML += classicContent;
+  
+    console.log(container);
+  }
+  
+
+
+//get link for "mordern age"
+  const mordernlink = document.getElementById('mordernlink');
+  //add event listener
+  mordernlink.addEventListener('click' , loadMordernContent);
+
+  function loadMordernContent(event) {
+    event.preventDefault();
+  
+    fetch('http://localhost:4000/mordern')
+      .then(response => response.json())
+      .then(mordern=> {
+        const contentContainer = document.getElementById("content-container");
+        contentContainer.innerHTML = ""; // Clear existing content
+        
+        mordern.forEach(artist => show(artist, contentContainer));
+      });
+  }
+  
+  function show(artist, container) {
+    const mordernContent = `
+      <h3>${artist.name}</h3>
+      <h1>${artist.famousArtwork}</h1>
+      <img src="${artist.image}">
+      <p>${artist.description}</p>
+      <p><em>${artist.about}</em></p>
+    `;
+  
+    container.innerHTML += mordernContent;
+  
+    console.log(container);
+  }
+
+
+
+
+  //get link for "contemporary "
+  const contemporarylink = document.getElementById('contemporarylink');
+  //add event listener
+  contemporarylink.addEventListener('click' , loadContemporaryContent);
+
+  function loadContemporaryContent(event) {
+    event.preventDefault();
+  
+    fetch('http://localhost:4000/contemporary')
+      .then(response => response.json())
+      .then(contemporary=> {
+        const contentContainer = document.getElementById("content-container");
+        contentContainer.innerHTML = ""; // Clear existing content
+        
+        contemporary.forEach(artist => show(artist, contentContainer));
+      });
+  }
+  
+  function show(artist, container) {
+    const contemporaryContent = `
+      <h3>${artist.name}</h3>
+      <h1>${artist.famousArtwork}</h1>
+      <img src="${artist.image}">
+      <p>${artist.description}</p>
+      <p><em>${artist.about}</em></p>
+    `;
+  
+    container.innerHTML += contemporaryContent;
+  
+    console.log(container);
+  }
+
+
+
+
+  
