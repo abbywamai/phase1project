@@ -5,41 +5,41 @@
         "name": "Raphael",
         "famousArtwork": "The School of Athens",
         "description": "The School of Athens is a fresco painting by Raphael. It portrays a gathering of influential philosophers and represents the intellectual and philosophical ideas of the Renaissance period.",
-        "image": "https://example.com/school_of_athens.jpg",
+        "image": "https://artsandculture.google.com/asset/pai-raphael-school-of-athens/lAFNRIoOCRb9UA?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.479601555755231%2C%22size%22%3A%7B%22width%22%3A2.1774202009839345%2C%22height%22%3A1.2374999999999996%7D%7D",
         "about": "Raphael was an Italian painter and architect renowned for his graceful compositions and harmonious aesthetics. He was considered one of the finest painters of the High Renaissance."
       },
       {
         "name": "Caravaggio",
         "famousArtwork": "The Calling of Saint Matthew",
         "description": "The Calling of Saint Matthew is a significant masterpiece by Caravaggio. It is known for its dramatic use of light and shadow, characteristic of Caravaggio's style.",
-        "image": "https://example.com/calling_of_saint_matthew.jpg",
+        "image": "https://artsandculture.google.com/asset/the-calling-of-saint-matthew-hendrick-ter-brugghen/8wER3W37Laz6Yg?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.3100093101073%2C%22size%22%3A%7B%22width%22%3A2.1380612955889733%2C%22height%22%3A1.237499999999999%7D%7D",
         "about": "Caravaggio was an Italian painter who pioneered the use of naturalistic techniques and dramatic lighting in his artworks. His innovative style had a profound influence on Baroque art."
       },
       {
         "name": "Titian",
         "famousArtwork": "Venus of Urbino",
         "description": "The Venus of Urbino is a captivating painting by Titian. It depicts a reclining nude figure and is celebrated for its sensual beauty and masterful use of color.",
-        "image": "https://example.com/venus_of_urbino.jpg",
+        "image": "https://artsandculture.google.com/asset/venus-of-urbino-tiziano-vecellio/bQGS8pnP5vr2Jg?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.773067671930788%2C%22size%22%3A%7B%22width%22%3A2.0079566876122095%2C%22height%22%3A1.2375000000000007%7D%7D",
         "about": "Titian, also known as Tiziano Vecellio, was an Italian painter of the Venetian school. His mastery of color and brushwork made him one of the most important figures in 16th-century art."
       },
       {
         "name": "Rembrandt",
         "famousArtwork": "The Night Watch",
         "description": "The Night Watch is a renowned painting by Rembrandt. It is an extraordinary group portrait of a militia company and is admired for its dynamic composition and use of light.",
-        "image": "https://example.com/night_watch.jpg",
+        "image": "https://artsandculture.google.com/asset/the-night-watch-rembrandt-harmensz-van-rijn/eQEojRwTdypUKA?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.305704944842496%2C%22size%22%3A%7B%22width%22%3A2.368383888257923%2C%22height%22%3A1.2375%7D%7D",
         "about": "Rembrandt van Rijn was a Dutch painter and etcher considered one of the greatest painters and printmakers in European art history. His work is characterized by his innovative use of light and shadow."
       },
       {
         "name": "Peter Paul Rubens",
         "famousArtwork": "The Descent from the Cross",
         "description": "The Descent from the Cross is a monumental painting by Peter Paul Rubens. It depicts the biblical scene of Christ being taken down from the cross and showcases Rubens' exceptional skill in capturing emotional intensity.",
-        "image": "https://example.com/descent_from_the_cross.jpg",
+        "image": "https://artsandculture.google.com/asset/the-descent-from-the-cross-after-caravaggio/-AHqJq3XtnEMjQ?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.026202432756353%2C%22size%22%3A%7B%22width%22%3A4.206867257583427%2C%22height%22%3A1.2375%7D%7D",
         "about": "Peter Paul Rubens was a Flemish painter and diplomat who was an influential figure in Baroque art. He is known for his exuberant style, vivid color palette, and dynamic compositions."
       },
       {
         "name": "Diego Velázquez",
         "famousArtwork": "Las Meninas",
-        "image": "https://example.com/las_meninas.jpg",
+        "image": "https://artsandculture.google.com/asset/velazquez-las-meninas-au-musee-du-prado-juan-laurent/KQGpY6nyH5C1Uw?ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.2744144196135%2C%22size%22%3A%7B%22width%22%3A3.394312461667828%2C%22height%22%3A1.2374999999999998%7D%7D",
         "description": "Las Meninas is a captivating painting by Diego Velázquez. It is a complex and intriguing portrayal of a royal family and their attendants, considered one of the most analyzed and admired artworks in Western art history.",
         "about": "Diego Velázquez was a Spanish painter renowned for his exceptional ability to capture the essence of his subjects and his remarkable handling of light and shadow. His works display a deep understanding of human character and a keen attention to detail, making them masterpieces of realism."
       }
