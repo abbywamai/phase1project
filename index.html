@@ -9,7 +9,7 @@
 <body>
     <header id="beg">
         <nav>
-            <!-- <h1>ART&I</h1> -->
+            
             <ul>
                 <li><a href=""id="homelink">Home</a></li>
                 <li><a href="" id="aboutlink">About</a></li>
@@ -41,7 +41,9 @@
         <img src="/html/picasso.jpeg">
     </div>
 </div>
+
 <h4 id="h4">DISCOVER THE <span>CANVAS</span> OF YOUR <span>IMAGINATION</span>.</h4>
+
 <div id="maneno">
 <p id="aboutcontent">"Welcome to Art&I, where creativity knows no bounds. Immerse yourself in a world of inspiration, expression, and artistic exploration. 
     Unleash your imagination, connect with like-minded creators, and embark on a transformative journey. 
@@ -73,6 +75,50 @@
 
                  <p id="aboutcontent"> Dive into the world of inspiring artwork from all around the world!</p>
 </div>
+
+<div id="formdiv">
+    <p id="aboutcontent">Want to be a part of our community? Join us now!</p>
+
+   
+
+    <form  >
+        <!-- Input fields for artwork details -->
+        <div class="form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title"  required>
+        </div>
+        
+        <div class="form">
+          <label for="artist">Artist:</label>
+          <input type="text" id="artist" name="artist" required>
+        </div>
+
+        <div class="form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"  required>
+          </div>
+
+        <div class="form">
+            <label for="title">Category:</label>
+            <input type="text" id="category" name="Category"  required>
+          </div>
+        
+        <!-- File input for artwork upload -->
+        <div class="form">
+          <label for="artwork">Upload Artwork:</label>
+          <input type="file" id="artwork" name="artwork" accept="image/*" required>
+        </div>
+        
+        <!-- Submit button -->
+        <div class="form">
+          <button id="btn" type="submit">Submit</button>
+        </div>
+      </form>
+       
+
+
+</div>
+
     <footer id="footer">
         <p>Like us? Visit us on 
         <a href="https://www.instagram.com/">instagram</a> and <a href="https://www.pinterest.com/">pinterest</a>
