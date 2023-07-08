@@ -1,32 +1,67 @@
+
 //select the home link
 const homelink = document.getElementById("homelink");
 //add an event listener to the home link
-homelink.addEventListener('click',loadHomeContent);
+homelink.addEventListener('click', loadHomeContent);
 //function to load the home content
-function loadHomeContent(event){
+function loadHomeContent(event) {
     event.preventDefault();
     const contentContainer = document.getElementById("content-container");
 
     fetch('index.html')
-    .then(response => response.text())
-    .then(content => {
-contentContainer.innerHTML = content;
-    })
-    .catch(error =>{
-        console.error('Error loading home content:', error);
-    })
+        .then(response => response.text())
+        .then(content => {
+            contentContainer.innerHTML = content;
+        })
+        .catch(error => {
+            console.error('Error loading home content:', error);
+        })
 }
 
+const form = document.getElementById("form");
+form.addEventListener("submit", handleFormSubmission);
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+
+  // Get the input values from the form
+  const title = document.getElementById("title").value;
+  const artist = document.getElementById("artist").value;
+  const email = document.getElementById("email").value;
+  const category = document.getElementById("category").value;
+  const artwork = document.getElementById("artwork").value;
+
+  // Create an object with the form data
+  const formData = {
+    title,
+    artist,
+    email,
+    category,
+    artwork
+  };
+
+  // Perform any desired actions with the form data
+  console.log(formData); // Example: Log the form data to the console
+
+  // Reset the form fields
+  form.reset();
+}
+
+
+
+
+
+//<-------------------ABOUT SECTION----------------->
 
 //select the about link
 const aboutLink = document.getElementById('aboutlink');
 aboutLink.addEventListener('click', loadAboutContent);
 //function to load about content
-function loadAboutContent(event){
+function loadAboutContent(event) {
     event.preventDefault();
     const contentContainer = document.getElementById("content-container")
 
-contentContainer.innerHTML = `
+    contentContainer.innerHTML = `
 <div class= "heading1">
             <h2>ART<span>&I</span></h2>
             </div >
@@ -49,61 +84,70 @@ contentContainer.innerHTML = `
 }
 
 
-//select the 'the Classics' link
-const classicsLink = document.getElementById('classicslink');
-// // add event listener
-classicsLink.addEventListener('click', loadClassicsContent);
 
-function loadClassicsContent(event) {
-    event.preventDefault();
-  
-    fetch('http://localhost:4000/classics')
-      .then(response => response.json())
-      .then(classics => {
-        const contentContainer = document.getElementById("content-container");
-        contentContainer.innerHTML = ""; // Clear existing content
-        
-        classics.forEach(artist => show(artist, contentContainer));
-      });
-  }
-  
-  function show(artist, container) {
+
+
+//<-------------------classics section-------------------------->
+
+//select the 'the Classics' link
+ const classicsLink = document.getElementById('classicslink');
+// // add event listener
+ classicsLink.addEventListener('click', loadClassicsContent);
+
+ function loadClassicsContent(event) {
+   event.preventDefault();
+
+   fetch('http://localhost:4000/classics')
+        .then(response => response.json())
+        .then(classics => {
+           const contentContainer = document.getElementById("content-container");
+            contentContainer.innerHTML = ""; // Clear existing content
+
+            classics.forEach(artist => show(artist, contentContainer));
+       })
+ }
+
+ function show(artist, container) {
     const classicContent = `
     <div class=divs>
-      <h3>${artist.name}</h3>
+          <h3>${artist.name}</h3>
       <h1>${artist.famousArtwork}</h1>
-      <img class="imgs" src="${artist.image}">
-      <p>${artist.description}</p>
-      <p><em>${artist.about}</em></p>
-      </div>
-    `;
-  
-    container.innerHTML += classicContent;
-  
-    console.log(container);
-  }
-  
+     <img class="imgs" src="${artist.image}">
+     <p>${artist.description}</p>
+     <p><em>${artist.about}</em></p>
+     </div>
+   `;
+  container.innerHTML += classicContent;
 
+    console.log(container);
+ }
+
+
+
+
+
+
+//<---------------------MORDERN AGE SECTION---------------------->
 
 //get link for "mordern age"
-  const mordernlink = document.getElementById('mordernlink');
-  //add event listener
-  mordernlink.addEventListener('click' , loadMordernContent);
+const mordernlink = document.getElementById('mordernlink');
+//add event listener
+mordernlink.addEventListener('click', loadMordernContent);
 
-  function loadMordernContent(event) {
+function loadMordernContent(event) {
     event.preventDefault();
-  
+
     fetch('http://localhost:4000/mordern')
-      .then(response => response.json())
-      .then(mordern=> {
-        const contentContainer = document.getElementById("content-container");
-        contentContainer.innerHTML = ""; // Clear existing content
-        
-        mordern.forEach(artist => show(artist, contentContainer));
-      });
-  }
-  
-  function show(artist, container) {
+        .then(response => response.json())
+        .then(mordern => {
+            const contentContainer = document.getElementById("content-container");
+            contentContainer.innerHTML = ""; // Clear existing content
+
+            mordern.forEach(artist => show(artist, contentContainer));
+        });
+}
+
+function show(artist, container) {
     const mordernContent = `
     <div class ="divs">
       <h3>${artist.name}</h3>
@@ -113,34 +157,41 @@ function loadClassicsContent(event) {
       <p><em>${artist.about}</em></p>
       </div>
     `;
-  
+
     container.innerHTML += mordernContent;
-  
+
     console.log(container);
-  }
+}
 
 
 
 
-  //get link for "contemporary "
-  const contemporarylink = document.getElementById('contemporarylink');
-  //add event listener
-  contemporarylink.addEventListener('click' , loadContemporaryContent);
 
-  function loadContemporaryContent(event) {
+
+//<----------------CONTEMPORARY ART SECTION------------>
+
+//get link for "contemporary "
+const contemporarylink = document.getElementById('contemporarylink');
+//add event listener
+contemporarylink.addEventListener('click', loadContemporaryContent);
+
+function loadContemporaryContent(event) {
     event.preventDefault();
-  
+
     fetch('http://localhost:4000/contemporary')
-      .then(response => response.json())
-      .then(contemporary=> {
-        const contentContainer = document.getElementById("content-container");
-        contentContainer.innerHTML = ""; // Clear existing content
-        
-        contemporary.forEach(artist => show(artist, contentContainer));
-      });
-  }
-  
-  function show(artist, container) {
+        .then(response => response.json())
+        .then(contemporary => {
+            const contentContainer = document.getElementById("content-container");
+            contentContainer.innerHTML = ""; // Clear existing content
+
+            contemporary.forEach(artist => show(artist, contentContainer));
+
+
+
+        });
+}
+
+function show(artist, container) {
     const contemporaryContent = `
     <div class = "divs">
       <h3>${artist.name}</h3>
@@ -150,13 +201,8 @@ function loadClassicsContent(event) {
       <p><em>${artist.about}</em></p>
       </div>
     `;
-  
+
     container.innerHTML += contemporaryContent;
-  
-    console.log(container);
-  }
 
-
-
-
-  
+    console.log(container)
+}

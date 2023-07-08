@@ -1,0 +1,124 @@
+
+  container.innerHTML += classicContent;
+const classicsLink = document.getElementById('classicslink');
+
+// Add event listener
+classicsLink.addEventListener('click', loadClassicsContent);
+
+function loadClassicsContent(event) {
+  event.preventDefault();
+
+  fetch('http://localhost:4000/classics')
+    .then(response => response.json())
+    .then(classics => {
+      const contentContainer = document.getElementById("content-container");
+      contentContainer.innerHTML = ""; // Clear existing content
+
+      classics.forEach(artist => show(artist, contentContainer));
+      // Add the form HTML after displaying artists
+      const formHTML = `
+        <p>Add your own work here!</p>
+        <form id="artworkform">
+          <!-- Input fields for artwork details -->
+          <div class="form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+      
+          <div class="form">
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist" name="artist" required>
+          </div>
+
+          <div class="form">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+          </div>
+      
+          <!-- File input for artwork upload -->
+          <div class="form">
+            <label for="artwork">Upload Artwork:</label>
+            <input type="file" id="artwork" name="artwork" accept="image/*" required>
+          </div>
+      
+          <!-- Submit button -->
+          <div class="form">
+            <button id="btn" type="submit">Submit</button>
+          </div>
+        </form>`;
+      contentContainer.innerHTML += formHTML;
+
+      const artworkForm = document.getElementById("artworkform");
+      artworkForm.addEventListener("submit", handleFormSubmission);
+      
+    });
+}
+
+function show(artist, container) {
+  const classicContent = `
+    <div class=divs>
+      <h3>${artist.name}</h3>
+      <h1>${artist.famousArtwork}</h1>
+      <img class="imgs" src="${artist.image}">
+      <p>${artist.description}</p>
+      <p><em>${artist.about}</em></p>
+    </div>
+  `;
+
+  
+
+  console.log(container);
+}
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+
+  const form = document.getElementById("artworkform");
+  const formValues = {
+  title: form.elements.title.value,
+  artist: form.elements.artist.value,
+  description: form.elements.description.value,
+  artwork: form.elements.artwork.value}
+
+
+  fetch("http://localhost:4000/classics", {
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+    body: JSON.stringify(formValues)
+  })
+    .then(response => response.json())
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+
+
+form.reset();
+}
+
+
+//<-------------- Submit button-------------->
+// Add event listener to the submit button
+const submitForm = document.getElementById("btn");
+
+ submitForm.addEventListener("submit", displayWelcomeMessage);
+
+// Event listener function to display a welcome message
+function displayWelcomeMessage(event) {
+    event.preventDefault();
+
+    // Get the input values from the form
+    const title = document.getElementById("title").value;
+    const artist = document.getElementById("artist").value;
+    const email = document.getElementById("email").value;
+
+    // Construct the welcome message
+    const message = `Welcome, ${artist} to ART&I! Your artwork, "${title}" has been submitted.
+  We shall reach out shortly to you at ${email}!`;
+
+    // Display the welcome message
+    alert(message);
+
+    //reset form field
+    titleInput.value = "";
+    artistInput.value = "";
+    emailInput.value = "";
+}
