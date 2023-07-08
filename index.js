@@ -69,11 +69,13 @@ function loadClassicsContent(event) {
   
   function show(artist, container) {
     const classicContent = `
+    <div class=divs>
       <h3>${artist.name}</h3>
       <h1>${artist.famousArtwork}</h1>
-      <img src="${artist.image}">
+      <img class="imgs" src="${artist.image}">
       <p>${artist.description}</p>
       <p><em>${artist.about}</em></p>
+      </div>
     `;
   
     container.innerHTML += classicContent;
@@ -103,11 +105,13 @@ function loadClassicsContent(event) {
   
   function show(artist, container) {
     const mordernContent = `
+    <div class ="divs">
       <h3>${artist.name}</h3>
       <h1>${artist.famousArtwork}</h1>
-      <img src="${artist.image}">
+      <img class="imgs" src="${artist.image}">
       <p>${artist.description}</p>
       <p><em>${artist.about}</em></p>
+      </div>
     `;
   
     container.innerHTML += mordernContent;
@@ -138,11 +142,13 @@ function loadClassicsContent(event) {
   
   function show(artist, container) {
     const contemporaryContent = `
+    <div class = "divs">
       <h3>${artist.name}</h3>
       <h1>${artist.famousArtwork}</h1>
-      <img src="${artist.image}">
+      <img class="imgs" src="${artist.image}">
       <p>${artist.description}</p>
       <p><em>${artist.about}</em></p>
+      </div>
     `;
   
     container.innerHTML += contemporaryContent;
