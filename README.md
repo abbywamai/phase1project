@@ -15,7 +15,7 @@ Art&I is an online art gallery that celebrates the diversity and creativity of a
 To set up the project locally, please follow these steps:
 1. Clone the repository to your local machine.
 2. Open the project folder in your preferred code editor.
-3. Ensure you have a web server installed (e.g., Apache, Nginx) or use a development server like Live Server for Visual Studio Code.
+3. Ensure you have a web server installed  or use a development server like Live Server for Visual Studio Code.
 4. Open the project in your web browser by accessing the local server's URL.
 
 ## Live Site
