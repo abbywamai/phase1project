@@ -19,33 +19,34 @@ function loadHomeContent(event) {
 }
 
 const form = document.getElementById("form");
-form.addEventListener("submit", handleFormSubmission);
+ form.addEventListener("submit", handleFormSubmission);
 
-function handleFormSubmission(event) {
+ function handleFormSubmission(event) {
   event.preventDefault();
 
-  // Get the input values from the form
+   // Get the input values from the form
   const title = document.getElementById("title").value;
-  const artist = document.getElementById("artist").value;
+     const artist = document.getElementById("artist").value;
   const email = document.getElementById("email").value;
-  const category = document.getElementById("category").value;
-  const artwork = document.getElementById("artwork").value;
+   const category = document.getElementById("category").value;
+   const artwork = document.getElementById("artwork").value;
 
   // Create an object with the form data
   const formData = {
     title,
     artist,
     email,
-    category,
+     category,
     artwork
-  };
+   };
 
   // Perform any desired actions with the form data
-  console.log(formData); // Example: Log the form data to the console
+   
+   alert("welcome! we will reach out shortly.")
 
-  // Reset the form fields
+//   // Reset the form fields
   form.reset();
-}
+ }
 
 
 
