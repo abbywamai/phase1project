@@ -41,7 +41,7 @@ const form = document.getElementById("form");
    };
 
   // Perform any desired actions with the form data
-   
+   console.log(formData)
    alert("welcome! we will reach out shortly.")
 
 //   // Reset the form fields
