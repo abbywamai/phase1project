@@ -17,6 +17,7 @@ To set up the project locally, please follow these steps:
 2. Open the project folder in your preferred code editor.
 3. Ensure you have a web server installed  or use a development server like Live Server for Visual Studio Code.
 4. Open the project in your web browser by accessing the local server's URL.
+5. localhost the json file for full functionality.
 
 ## Live Site
 To view the live site, visit the [Art&I GitHub Pages] and explore the captivating world of art.
